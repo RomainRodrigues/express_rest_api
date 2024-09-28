@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+    image: rest-api
+    container_name: rest-api
+    volumes:
+      - $HOME/.npm:/www-data/.npm
+      - ./app:/app
+    ports:
+      - "3000:3000"
